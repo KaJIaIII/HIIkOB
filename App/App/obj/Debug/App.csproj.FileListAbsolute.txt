@@ -20,3 +20,15 @@ C:\Users\User12\Desktop\demo2504-master\App\App\obj\Debug\App.csproj.GenerateRes
 C:\Users\User12\Desktop\demo2504-master\App\App\obj\Debug\App.csproj.CoreCompileInputs.cache
 C:\Users\User12\Desktop\demo2504-master\App\App\obj\Debug\App.exe
 C:\Users\User12\Desktop\demo2504-master\App\App\obj\Debug\App.pdb
+C:\Users\User12\Git\App\App\bin\Debug\App.exe.config
+C:\Users\User12\Git\App\App\bin\Debug\App.exe
+C:\Users\User12\Git\App\App\bin\Debug\App.pdb
+C:\Users\User12\Git\App\App\obj\Debug\App.csprojAssemblyReference.cache
+C:\Users\User12\Git\App\App\obj\Debug\App.AuthForm.resources
+C:\Users\User12\Git\App\App\obj\Debug\App.Properties.Resources.resources
+C:\Users\User12\Git\App\App\obj\Debug\App.RegForm.resources
+C:\Users\User12\Git\App\App\obj\Debug\App.csproj.GenerateResource.cache
+C:\Users\User12\Git\App\App\obj\Debug\App.csproj.CoreCompileInputs.cache
+C:\Users\User12\Git\App\App\obj\Debug\App.exe
+C:\Users\User12\Git\App\App\obj\Debug\App.pdb
+C:\Users\User12\Git\App\App\obj\Debug\App.UserForm.resources

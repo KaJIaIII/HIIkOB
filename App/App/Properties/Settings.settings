@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="dbConnectionSettings" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Server=INSTANCE-1; Database=test2; User id =sa; Password =tesT900;</Value>
+      <Value Profile="(Default)">Server=INSTANCE-1; Database=Bragar; User id =sa; Password =tesT900;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -25,7 +25,7 @@ namespace App.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Server=INSTANCE-1; Database=test2; User id =sa; Password =tesT900;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=INSTANCE-1; Database=Bragar; User id =sa; Password =tesT900;")]
         public string dbConnectionSettings {
             get {
                 return ((string)(this["dbConnectionSettings"]));
