@@ -16,5 +16,22 @@ namespace App
         {
             InitializeComponent();
         }
+        Form form;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+           
+            this.Close();
+            form = new AuthForm();
+            form.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            form = new FormTkani();
+            form.Show();
+        }
     }
 }

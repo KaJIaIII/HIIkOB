@@ -32,3 +32,8 @@ C:\Users\User12\Git\App\App\obj\Debug\App.csproj.CoreCompileInputs.cache
 C:\Users\User12\Git\App\App\obj\Debug\App.exe
 C:\Users\User12\Git\App\App\obj\Debug\App.pdb
 C:\Users\User12\Git\App\App\obj\Debug\App.UserForm.resources
+C:\Users\User12\Git\App\App\obj\Debug\App.AdminForm.resources
+C:\Users\User12\Git\App\App\obj\Debug\App.FormFurnitura.resources
+C:\Users\User12\Git\App\App\obj\Debug\App.FormTkani.resources
+C:\Users\User12\Git\App\App\obj\Debug\App.ManagerForm.resources
+C:\Users\User12\Git\App\App\obj\Debug\App.WareForm.resources
