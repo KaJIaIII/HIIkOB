@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,31 +46,30 @@ namespace App
 
             DataGridViewImageColumn img = new DataGridViewImageColumn();
             img.Name = "img";
-            img.HeaderText = "Изображение";
+            img.HeaderText = "Картинка";
             dataGridView1.Columns.Add(img);
-            Image image;
             for (int i = 0; i < dataGridView1.RowCount; i++)
             {
-                try
+                if (dataGridView1.Rows[i].Cells[1].Value != null)
                 {
+                    string basePath = "C:/Users/User12/Git/izobr/";
                     string filename = dataGridView1.Rows[i].Cells[1].Value.ToString() + ".jpg";
-                    if (i == 1)
+                    string fullPath = basePath + filename;
+                    Image image;
+                    if (File.Exists(fullPath))
                     {
-                        MessageBox.Show(filename);
+                        image = Image.FromFile(fullPath);
                     }
-                    image = Image.FromFile(@"C:\Users\User12\Git\" + filename);
+                    else
+                    {
+                        image = Image.FromFile(basePath + "empty.jpg");
+                    }
+                    dataGridView1.Rows[i].Cells["img"].Value = image;
                 }
-                catch
-                {
-                    image = Image.FromFile(@"C:\Users\User12\Git\izobr\tkan1.jpg");
-                }
-                dataGridView1.Rows[i].Cells["img"].Value = image;
             }
 
-            connection.Close();
-
-
-
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
     }
 }
