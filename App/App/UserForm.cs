@@ -33,5 +33,12 @@ namespace App
             form = new FormTkani();
             form.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            form = new FormFurnitura();
+            form.Show();
+        }
     }
 }
