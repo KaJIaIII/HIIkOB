@@ -43,6 +43,33 @@ namespace App
             sda.Fill(ds, "tkani");
             dataGridView1.DataSource = ds.Tables["tkani"];
 
+            DataGridViewImageColumn img = new DataGridViewImageColumn();
+            img.Name = "img";
+            img.HeaderText = "Изображение";
+            dataGridView1.Columns.Add(img);
+            Image image;
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                try
+                {
+                    string filename = dataGridView1.Rows[i].Cells[1].Value.ToString() + ".jpg";
+                    if (i == 1)
+                    {
+                        MessageBox.Show(filename);
+                    }
+                    image = Image.FromFile(@"C:\Users\User12\Git\" + filename);
+                }
+                catch
+                {
+                    image = Image.FromFile(@"C:\Users\User12\Git\izobr\tkan1.jpg");
+                }
+                dataGridView1.Rows[i].Cells["img"].Value = image;
+            }
+
+            connection.Close();
+
+
+
         }
     }
 }

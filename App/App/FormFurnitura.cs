@@ -35,6 +35,11 @@ namespace App
             DataSet ds = new DataSet();
             sda.Fill(ds, "furnitura");
             dataGridView1.DataSource = ds.Tables["furnitura"];
+
+            
+        
+
+
         }
     }
 }
