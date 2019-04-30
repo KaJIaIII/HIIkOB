@@ -6,8 +6,20 @@ using System.Windows.Forms;
 
 namespace App
 {
+    static public class Global
+    {
+        private static string _globalVar = "";
+
+        public static string Role
+        {
+            get { return _globalVar; }
+            set { _globalVar = value; }
+        }
+    }
+
     static class Program
     {
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -19,4 +31,5 @@ namespace App
             Application.Run(new AuthForm());
         }
     }
+
 }

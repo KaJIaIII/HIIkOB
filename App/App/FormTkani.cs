@@ -21,6 +21,8 @@ namespace App
 
         SqlConnection connection = new SqlConnection(Properties.Settings.Default.dbConnectionSettings);
         Form form;
+        DataSet ds;
+        SqlDataAdapter sda;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -38,9 +40,10 @@ namespace App
 
         private void FormTkani_Load(object sender, EventArgs e)
         {
+            MessageBox.Show(App.Global.Role);
             string query = "SELECT * FROM dbo.tkani";
-            SqlDataAdapter sda = new SqlDataAdapter(query, connection);
-            DataSet ds = new DataSet();
+            sda = new SqlDataAdapter(query, connection);
+            ds = new DataSet();
             sda.Fill(ds, "tkani");
             dataGridView1.DataSource = ds.Tables["tkani"];
 
@@ -70,6 +73,28 @@ namespace App
 
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataSet changes = this.ds.GetChanges();
+            if (changes != null)
+            {
+                SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+                builder.GetInsertCommand();
+
+                int updatesRows = this.sda.Update(changes,"tkani");
+                this.ds.AcceptChanges();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            foreach(DataGridViewRow items in dataGridView1.SelectedRows)
+            {
+                dataGridView1.Rows.RemoveAt(items.Index);
+            }
+            this.button2_Click(sender, e);
         }
     }
 }

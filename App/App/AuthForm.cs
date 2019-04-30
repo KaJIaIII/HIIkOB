@@ -54,15 +54,19 @@ namespace App
             {
                 case "User":
                     form = new UserForm();
+                    App.Global.Role = "User";
                     break;
                 case "Director":
                     form = new AdminForm();
+                    App.Global.Role = "Director";
                     break;
                 case "Ware":
                     form = new WareForm();
+                    App.Global.Role = "Ware";
                     break;
                 case "Manager":
                     form = new ManagerForm();
+                    App.Global.Role = "Manager";
                     break;
             }
             this.Hide();
