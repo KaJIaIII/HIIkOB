@@ -34,5 +34,15 @@ namespace App.Properties {
                 this["dbConnectionSettings"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=INSTANCE-1;Initial Catalog=Bragar;Integrated Security=True")]
+        public string BragarConnectionString {
+            get {
+                return ((string)(this["BragarConnectionString"]));
+            }
+        }
     }
 }

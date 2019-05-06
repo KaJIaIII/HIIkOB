@@ -58,6 +58,11 @@
     <Compile Include="AuthForm.Designer.cs">
       <DependentUpon>AuthForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BragarDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BragarDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormFurnitura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +143,17 @@
     <EmbeddedResource Include="WareForm.resx">
       <DependentUpon>WareForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BragarDataSet.xsc">
+      <DependentUpon>BragarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BragarDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BragarDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BragarDataSet.xss">
+      <DependentUpon>BragarDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
