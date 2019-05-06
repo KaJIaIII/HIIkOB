@@ -37,3 +37,4 @@ C:\Users\User12\Git\App\App\obj\Debug\App.FormFurnitura.resources
 C:\Users\User12\Git\App\App\obj\Debug\App.FormTkani.resources
 C:\Users\User12\Git\App\App\obj\Debug\App.ManagerForm.resources
 C:\Users\User12\Git\App\App\obj\Debug\App.WareForm.resources
+C:\Users\User12\Git\App\App\obj\Debug\App.FormKonstr.resources

@@ -79,5 +79,12 @@ namespace App
             reg = new RegForm();
             reg.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form form = new FormKonstr();
+            this.Hide();
+            form.Show();
+        }
     }
 }

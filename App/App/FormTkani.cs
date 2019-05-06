@@ -26,10 +26,23 @@ namespace App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            switch (App.Global.Role)
+            {
+                case "User":
+                    form = new UserForm();
+                    break;
+                case "Director":
+                    form = new AdminForm();
+                    break;
+                case "Ware":
+                    form = new WareForm();
+                    break;
+                case "Manager":
+                    form = new ManagerForm();
+                    break;
+            }
 
-            this.Close();
-            form = new AuthForm();
+            this.Hide();
             form.Show();
         }
 
