@@ -14,7 +14,7 @@ namespace App
     public partial class FormKonstr : Form
     {
         SqlConnection connection = new SqlConnection(Properties.Settings.Default.dbConnectionSettings);
-
+        Form form = new Form();
         int Shir = 10;
         int Vis = 10;
 
@@ -96,6 +96,9 @@ namespace App
 
             connection.Close();
             MessageBox.Show("Изделие добавлено\n");
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -103,6 +106,28 @@ namespace App
             Shir = Convert.ToInt16(textBox2.Text);
             Vis = Convert.ToInt16(textBox3.Text);
             Draw();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            switch (App.Global.Role)
+            {
+                case "User":
+                    form = new UserForm();
+                    break;
+                case "Director":
+                    form = new AdminForm();
+                    break;
+                case "Ware":
+                    form = new WareForm();
+                    break;
+                case "Manager":
+                    form = new ManagerForm();
+                    break;
+            }
+
+            this.Hide();
+            form.Show();
         }
     }
 }

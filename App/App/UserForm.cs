@@ -27,17 +27,26 @@ namespace App
             form.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+
+        private void тканиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
             form = new FormTkani();
             form.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void фурнитураToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
             form = new FormFurnitura();
+            form.Show();
+        }
+
+        private void изделияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            form = new FormKonstr();
             form.Show();
         }
     }
