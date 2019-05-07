@@ -57,13 +57,43 @@ namespace App
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string rand = Convert.ToString(DateTime.Now);
             connection.Open();
+
             SqlCommand command = new SqlCommand("INSERT INTO izdeliya (name,weight,length,articul) VALUES (@name,@weight,@lenght,@articul)", connection);
             command.Parameters.AddWithValue("@name", textBox1.Text);
-            command.Parameters.AddWithValue("@weight", textBox2.Text);
-            command.Parameters.AddWithValue("@lenght", textBox3.Text);
-            command.Parameters.AddWithValue("@articul", Convert.ToString(DateTime.Today));
+            command.Parameters.AddWithValue("@weight", textBox3.Text);
+            command.Parameters.AddWithValue("@lenght", textBox2.Text);
+            command.Parameters.AddWithValue("@articul", rand);
             int regged = Convert.ToInt32(command.ExecuteNonQuery());
+
+         
+
+            SqlCommand commandr = new SqlCommand("SELECT max(id) FROM izdeliya", connection);
+            SqlDataReader reader = commandr.ExecuteReader();
+
+            string id = "";
+            while (reader.Read())
+            {
+                id = reader[0].ToString();
+            }
+
+            connection.Close();
+            connection.Open();
+
+            SqlCommand command1 = new SqlCommand("INSERT INTO [tkani izdeliya] ([article tkani],[article izdeliya]) VALUES (@artk,@ariz)", connection);
+            command1.Parameters.AddWithValue("@artk", comboBox1.Text);
+            command1.Parameters.AddWithValue("@ariz", id);
+            int regged1 = Convert.ToInt32(command1.ExecuteNonQuery());
+
+            SqlCommand command2 = new SqlCommand("INSERT INTO [furnitura izdeliya] ([artikul furn],[artikul izdel],width,length,kolichestvo) VALUES (@arfu,@ariz,@width,@lenght,@kolvo)", connection);
+            command2.Parameters.AddWithValue("@arfu", comboBox2.Text);
+            command2.Parameters.AddWithValue("@ariz", id);
+            command2.Parameters.AddWithValue("@width", textBox3.Text);
+            command2.Parameters.AddWithValue("@lenght", textBox2.Text);
+            command2.Parameters.AddWithValue("@kolvo", "1");
+            int regged2 = Convert.ToInt32(command2.ExecuteNonQuery());
+
             connection.Close();
             MessageBox.Show("Изделие добавлено\n");
         }

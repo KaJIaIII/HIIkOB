@@ -32,25 +32,25 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tkaniBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bragarDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bragarDataSet = new App.BragarDataSet();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.furnituraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.bragarDataSet = new App.BragarDataSet();
-            this.bragarDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tkaniBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tkaniTableAdapter = new App.BragarDataSetTableAdapters.tkaniTableAdapter();
-            this.furnituraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.furnituraTableAdapter = new App.BragarDataSetTableAdapters.furnituraTableAdapter();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.bragarDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bragarDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tkaniBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bragarDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bragarDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.furnituraBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,12 +72,27 @@
             // comboBox1
             // 
             this.comboBox1.DataSource = this.tkaniBindingSource;
-            this.comboBox1.DisplayMember = "name";
+            this.comboBox1.DisplayMember = "id";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(581, 107);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(178, 21);
             this.comboBox1.TabIndex = 2;
+            // 
+            // tkaniBindingSource
+            // 
+            this.tkaniBindingSource.DataMember = "tkani";
+            this.tkaniBindingSource.DataSource = this.bragarDataSetBindingSource;
+            // 
+            // bragarDataSetBindingSource
+            // 
+            this.bragarDataSetBindingSource.DataSource = this.bragarDataSet;
+            this.bragarDataSetBindingSource.Position = 0;
+            // 
+            // bragarDataSet
+            // 
+            this.bragarDataSet.DataSetName = "BragarDataSet";
+            this.bragarDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox2
             // 
@@ -96,12 +111,17 @@
             // comboBox2
             // 
             this.comboBox2.DataSource = this.furnituraBindingSource;
-            this.comboBox2.DisplayMember = "name";
+            this.comboBox2.DisplayMember = "Artikul";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(581, 265);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(178, 21);
             this.comboBox2.TabIndex = 5;
+            // 
+            // furnituraBindingSource
+            // 
+            this.furnituraBindingSource.DataMember = "furnitura";
+            this.furnituraBindingSource.DataSource = this.bragarDataSetBindingSource;
             // 
             // label1
             // 
@@ -121,29 +141,9 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Фурнитура";
             // 
-            // bragarDataSet
-            // 
-            this.bragarDataSet.DataSetName = "BragarDataSet";
-            this.bragarDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bragarDataSetBindingSource
-            // 
-            this.bragarDataSetBindingSource.DataSource = this.bragarDataSet;
-            this.bragarDataSetBindingSource.Position = 0;
-            // 
-            // tkaniBindingSource
-            // 
-            this.tkaniBindingSource.DataMember = "tkani";
-            this.tkaniBindingSource.DataSource = this.bragarDataSetBindingSource;
-            // 
             // tkaniTableAdapter
             // 
             this.tkaniTableAdapter.ClearBeforeFill = true;
-            // 
-            // furnituraBindingSource
-            // 
-            this.furnituraBindingSource.DataMember = "furnitura";
-            this.furnituraBindingSource.DataSource = this.bragarDataSetBindingSource;
             // 
             // furnituraTableAdapter
             // 
@@ -200,7 +200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 444);
+            this.ClientSize = new System.Drawing.Size(778, 396);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
@@ -218,9 +218,9 @@
             this.Text = "FormKonstr";
             this.Load += new System.EventHandler(this.FormKonstr_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormKonstr_Paint);
-            ((System.ComponentModel.ISupportInitialize)(this.bragarDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bragarDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tkaniBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bragarDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bragarDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.furnituraBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
