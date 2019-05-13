@@ -49,5 +49,12 @@ namespace App
             form = new FormKonstr();
             form.Show();
         }
+
+        private void заказToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            form = new FormOform();
+            form.Show();
+        }
     }
 }

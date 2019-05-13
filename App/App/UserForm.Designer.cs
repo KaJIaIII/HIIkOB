@@ -35,6 +35,7 @@
             this.фурнитураToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.конструкторыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.изделияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.заказToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,21 +72,22 @@
             // тканиToolStripMenuItem
             // 
             this.тканиToolStripMenuItem.Name = "тканиToolStripMenuItem";
-            this.тканиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.тканиToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.тканиToolStripMenuItem.Text = "Ткани";
             this.тканиToolStripMenuItem.Click += new System.EventHandler(this.тканиToolStripMenuItem_Click);
             // 
             // фурнитураToolStripMenuItem
             // 
             this.фурнитураToolStripMenuItem.Name = "фурнитураToolStripMenuItem";
-            this.фурнитураToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.фурнитураToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.фурнитураToolStripMenuItem.Text = "Фурнитура";
             this.фурнитураToolStripMenuItem.Click += new System.EventHandler(this.фурнитураToolStripMenuItem_Click);
             // 
             // конструкторыToolStripMenuItem
             // 
             this.конструкторыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.изделияToolStripMenuItem});
+            this.изделияToolStripMenuItem,
+            this.заказToolStripMenuItem});
             this.конструкторыToolStripMenuItem.Name = "конструкторыToolStripMenuItem";
             this.конструкторыToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
             this.конструкторыToolStripMenuItem.Text = "Конструкторы";
@@ -96,6 +98,13 @@
             this.изделияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.изделияToolStripMenuItem.Text = "Изделия";
             this.изделияToolStripMenuItem.Click += new System.EventHandler(this.изделияToolStripMenuItem_Click);
+            // 
+            // заказToolStripMenuItem
+            // 
+            this.заказToolStripMenuItem.Name = "заказToolStripMenuItem";
+            this.заказToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.заказToolStripMenuItem.Text = "Заказ";
+            this.заказToolStripMenuItem.Click += new System.EventHandler(this.заказToolStripMenuItem_Click);
             // 
             // UserForm
             // 
@@ -123,5 +132,6 @@
         private System.Windows.Forms.ToolStripMenuItem фурнитураToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem конструкторыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem изделияToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem заказToolStripMenuItem;
     }
 }
