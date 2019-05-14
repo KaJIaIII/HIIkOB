@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,10 @@ namespace App
 {
     public partial class FormOform : Form
     {
+        SqlConnection connection = new SqlConnection(Properties.Settings.Default.dbConnectionSettings);
+        double total = 0;
+        double izdelie_price = 0;
+
         public FormOform()
         {
             InitializeComponent();
@@ -43,6 +48,11 @@ namespace App
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormOform_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
