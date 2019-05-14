@@ -63,6 +63,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BragarDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FormDobtkan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDobtkan.Designer.cs">
+      <DependentUpon>FormDobtkan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormFurnitura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AuthForm.resx">
       <DependentUpon>AuthForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDobtkan.resx">
+      <DependentUpon>FormDobtkan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormFurnitura.resx">
       <DependentUpon>FormFurnitura.cs</DependentUpon>

@@ -129,5 +129,12 @@ namespace App
             this.Hide();
             form.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form form = new FormDobtkan();
+            this.Hide();
+            form.Show();
+        }
     }
 }
