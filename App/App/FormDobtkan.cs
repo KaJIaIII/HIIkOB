@@ -33,7 +33,7 @@ namespace App
             openFileDialog1.Title = "Выбрать картинку";
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                filename = openFileDialog1.FileName;
+                filename = openFileDialog1.SafeFileName;
             }
         }
 

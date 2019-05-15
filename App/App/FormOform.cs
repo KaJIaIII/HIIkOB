@@ -14,8 +14,7 @@ namespace App
     public partial class FormOform : Form
     {
         SqlConnection connection = new SqlConnection(Properties.Settings.Default.dbConnectionSettings);
-        double total = 0;
-        double izdelie_price = 0;
+        
 
         public FormOform()
         {
@@ -47,12 +46,16 @@ namespace App
 
         private void button2_Click(object sender, EventArgs e)
         {
+            connection.Open();
+
 
         }
 
         private void FormOform_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'bragarDataSet.izdeliya' table. You can move, or remove it, as needed.
+            this.izdeliyaTableAdapter.Fill(this.bragarDataSet.izdeliya);
+
         }
     }
 }
